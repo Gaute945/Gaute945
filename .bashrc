@@ -6,15 +6,14 @@
 [[ $- != *i* ]] && return
 
 # Custom
-colorscript random
+pokemon-colorscripts -r
 toilet -f term -F border --gay "Welcome $USER!"
 maxfetch
 
 alias btop='sudo btop'
 alias grep='grep --color=auto'
 alias lsa='eza -l --icons'
-alias pacman='sudo pacman'
-alias ls='eza -l --icons -a'
+alias ls='eza -lha --icons -a'
 alias update='sudo pacman -Syu && yay -Syu'
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 alias vencord='sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"'
@@ -22,6 +21,9 @@ alias l='/usr/bin/ls'
 alias via='sudo chown $USER /dev/hidraw1'
 alias i3c='nvim ~/.config/i3/config'
 alias i3b='nvim ~/.config/i3status/config'
+alias audio='systemctl --user restart pipewire.service'
+alias pbc='nvim ~/.config/polybar/config.ini'
+alias pic='nvim ~/.config/picom/picom.conf'
 
 # apps
 alias spotify='nohup /bin/spotify &'

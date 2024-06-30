@@ -9,7 +9,7 @@ public_ip=$(curl -s4 ifconfig.co)
 
 # Initialize variables
 hour_counter=0
-max_cpu_temp=80 # Define the maximum CPU temperature threshold in Celsius
+max_cpu_temp=95 # Define the maximum CPU temperature threshold in Celsius
 
 while true; do
 	# Increment the hour counter
@@ -40,6 +40,6 @@ while true; do
 	# Get total system load
 	total_load=$(uptime | awk -F 'load average:' '{print $2}' | awk '{print $1}')
 
-	echo "Weather: $temperature°C | Local IP: $local_ip | Public IP: $public_ip | CPU: $cpu_usage% | CPU Temp: ${cpu_temp#+} / ${max_cpu_temp}°C | Load: $total_load | RAM: ${used_ram}GB/${total_ram}GB | Disk: Used: ${used_disk}GB, Free: ${free_disk}GB | Volume: $volume% | $(LC_TIME=nb_NO.UTF-8 date +"%A %e. %B %H:%M:%S")"
+	echo " $temperature°C |  $local_ip |  $public_ip |  $cpu_usage%   ${cpu_temp#+}  ${max_cpu_temp}°C |  $total_load |   ${used_ram}GB  ${total_ram}GB |   ${used_disk}GB,  ${free_disk}GB | 󰕾 $volume% | 󰥔 $(LC_TIME=nb_NO.UTF-8 date +"%A %e. %B %H:%M:%S")"
 	sleep 0.7
 done
