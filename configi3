@@ -20,8 +20,9 @@ default_border none
 
 # Automatically starting applications
 # exec --no-startup-id xdg-open https://example.com
-exec --no-startup-id discord
+# exec --no-startup-id discord
 exec --no-startup-id spotube
+exec --no-startup-id vesktop
 
 # polybar for i3 bar
 exec_always --no-startup-id ~/Documents/polybar.sh
