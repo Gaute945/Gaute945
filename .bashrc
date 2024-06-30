@@ -18,18 +18,13 @@ alias update='sudo pacman -Syu && yay -Syu'
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 alias vencord='sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"'
 alias l='/usr/bin/ls'
-alias via='sudo chown $USER /dev/hidraw1'
+alias via='sudo chown $USER /dev/hidraw1' # fix for keyboard not showing up in via
 alias i3c='nvim ~/.config/i3/config'
 alias i3b='nvim ~/.config/i3status/config'
-alias audio='systemctl --user restart pipewire.service'
+alias audio='systemctl --user restart pipewire.service' # fix for audio not working sometimes
 alias pbc='nvim ~/.config/polybar/config.ini'
 alias pic='nvim ~/.config/picom/picom.conf'
-
-# apps
-alias spotify='nohup /bin/spotify &'
-alias start='nohup'
-alias youtube='nohup xdg-open https://youtube.com &'
-alias helvum='nohup helvum &'
+alias alc='nvim ~/.config/alacritty/alacritty.toml'
 
 ### ARCHIVE EXTRACTION
 # usage: ex <file>
