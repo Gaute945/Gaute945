@@ -105,11 +105,14 @@ tiling_drag modifier titlebar
 # start a terminal
 bindsym CTRL+$mod1+t exec alacritty
 
+# Rofi application launcher with custom theme
+bindsym $mod+d exec rofi -show drun -theme ~/.config/rofi/config.rasi
+
 # kill focused window
 bindsym $mod1+F4 kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+#bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
