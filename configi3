@@ -21,8 +21,9 @@ default_border none
 # Automatically starting applications
 # exec --no-startup-id xdg-open https://example.com
 # exec --no-startup-id discord
-exec --no-startup-id spotube
-exec --no-startup-id vesktop
+
+exec --no-startup-id i3-msg 'workspace 2; exec vesktop'
+exec --no-startup-id i3-msg 'workspace 2; exec spotube'
 
 # polybar for i3 bar
 exec_always --no-startup-id ~/Documents/polybar.sh
@@ -84,6 +85,12 @@ exec --no-startup-id dex --autostart --environment i3
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
+# autostart notification manager
+exec_always --no-startup-id dunst &
+
+# custom script to make alt key enable no layout and ctrl key enable us layout
+exec --no-startup-id xbindkeys
+
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
@@ -105,14 +112,17 @@ tiling_drag modifier titlebar
 # start a terminal
 bindsym CTRL+$mod1+t exec alacritty
 
+# open a new terminal in the current directory
+bindsym Ctrl+Mod1+Shift+t exec --no-startup-id alacritty --working-directory "$(pwd)"
+
 # Rofi application launcher with custom theme
-bindsym $mod+d exec rofi -show drun -theme ~/.config/rofi/config.rasi
+bindsym $mod+d exec rofi -show drun -theme ~/.config/rofi/config.rasi -show-icons
 
 # kill focused window
 bindsym $mod1+F4 kill
 
 # start dmenu (a program launcher)
-#bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+ctrl+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
