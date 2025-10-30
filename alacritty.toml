@@ -17,16 +17,6 @@ style = "Italic"
 family = "Fira Code"
 style = "Regular"
 
-[[keyboard.bindings]]
-action = "Paste"
-key = "V"
-mods = "Control|Shift"
-
-[[keyboard.bindings]]
-action = "Copy"
-key = "C"
-mods = "Control|Shift"
-
 [window.padding]
 x = 10
 y = 10
