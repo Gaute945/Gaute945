@@ -1,0 +1,42 @@
+configuration {
+    font: "Monospace 12";
+    show-icons: true;
+    modi: "run,drun,window";
+    // add other config options as desired
+}
+
+@theme "custom-transparent"
+
+* {
+    padding: 5px 10px;
+    border: 0px;
+    border-radius: 10px;
+    background-color: rgb(40, 35, 39);
+    text-color: #CC8DD1;
+}
+
+window {
+    background-color: rgb(40, 35, 39);
+}
+
+element {
+    background-color: rgb(40, 35, 39);
+    text-color: #CC8DD1;
+    border-color: #7B008F;
+    alternate-background: #7B008F;
+}
+
+element selected {
+    background-color: #7B008F;
+    text-color: #CF90D4;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+}
+
+element-icon {
+    background-color: inherit;
+    text-color: inherit;
+}
